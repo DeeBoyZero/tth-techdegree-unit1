@@ -1,2 +1,2 @@
-# tth-techdegree-unit1
-Treehouse techdegree unit 1
+# TeamTreehouse Fullstack Javascript Techdegree Unit 1
+## Random Quote generator
