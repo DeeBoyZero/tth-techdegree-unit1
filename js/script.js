@@ -53,7 +53,7 @@ function getRandomRGB() {
 };
 
 // A function that generates HTML code from a random quote.
-// The quote is displayed on the webpage.
+// The quote is displayed on the webpage. The background color of the page changes everytime the function is called.
 
 function printQuote() {
   let randomQuote = getRandomQuote(quotes);
