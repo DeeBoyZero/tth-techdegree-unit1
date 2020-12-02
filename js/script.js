@@ -4,9 +4,7 @@ project 1 - A Random Quote Generator
 Author: Mathieu Desilets
 ******************************************/
 
-/*** 
-  Providing an array of quote objects to be used by the `getRandomQuote` function.
-***/
+// Providing an array of quote objects to be used by the `getRandomQuote` function.
 
 const quotes = [
   {
@@ -17,7 +15,7 @@ const quotes = [
     quote: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
     source: "Martin Fowler",
     citation: "Refactoring: Improving the Design of Existing Code",
-    year: 1999
+    year: "1999"
   },
   {
     quote: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight.",
@@ -26,6 +24,7 @@ const quotes = [
   {
     quote: "In a room full of top software designers, if two agree on the same thing, that's a majority.",
     source: "Bill Curtis",
+    //Added the tags property (Exceed Expectations stuff)
     tags: "humor"
   },
   {
@@ -34,18 +33,16 @@ const quotes = [
   }
 ];
 
-/***
-A simple function that picks a random quote.
-***/
+// A simple function that picks a random quote.
 
 function getRandomQuote(arr) {
   let randomNum = Math.floor(Math.random() * arr.length);
   return arr[randomNum];
 };
 
-/**
-Functions that will be used for randomizing the background color of the page. 
-**/
+
+// Functions that will be used for randomizing the background color of the page. 
+
 function getRandomNumber() {
   let randomNum = Math.floor(Math.random() * 255);
   return randomNum
@@ -56,10 +53,8 @@ function getRandomRGB() {
   return randomRGB;
 };
 
-/***
-A function that generates HTML code from a random quote.
-The quote is displayed on the webpage.
-***/
+// A function that generates HTML code from a random quote.
+// The quote is displayed on the webpage.
 
 function printQuote() {
   let randomQuote = getRandomQuote(quotes);
@@ -73,18 +68,21 @@ function printQuote() {
   if ( randomQuote.year ) {
     html += `<span class="year">${randomQuote.year}</span>"`;
   }
+  //Added the tags property (Exceed Expectations stuff)
   if ( randomQuote.tags ) {
-    html += `<span class="tags">, <em>${randomQuote.tags}</em></span>`
+    html += `<span class="tags">${randomQuote.tags}</span>`
   }
 
   html += `</p>`;
 
   document.getElementById('quote-box').innerHTML = html;
+
+  //Change the background color of the page everytime the quote changes (Exceed Expectations stuff)
   document.body.style.backgroundColor = getRandomRGB();
 };
 
-/***
-click event listener for the print quote button
-***/
-
+// click event listener for the print quote button
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+// Auto-refresh the quotes every 10 seconds (Exceed Expectations stuff)
+setInterval(function() { printQuote(); }, 10000);
