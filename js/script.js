@@ -40,12 +40,11 @@ function getRandomQuote(arr) {
   return arr[randomNum];
 };
 
-
 // Functions that will be used for randomizing the background color of the page. 
 
 function getRandomNumber() {
   let randomNum = Math.floor(Math.random() * 255);
-  return randomNum
+  return randomNum;
 }
 
 function getRandomRGB() {
@@ -70,7 +69,7 @@ function printQuote() {
   }
   //Added the tags property (Exceed Expectations stuff)
   if ( randomQuote.tags ) {
-    html += `<span class="tags">${randomQuote.tags}</span>`
+    html += `<span class="tags">${randomQuote.tags}</span>`;
   }
 
   html += `</p>`;
