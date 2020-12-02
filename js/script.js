@@ -25,7 +25,8 @@ const quotes = [
   },
   {
     quote: "In a room full of top software designers, if two agree on the same thing, that's a majority.",
-    source: "Bill Curtis"
+    source: "Bill Curtis",
+    tags: "humor"
   },
   {
     quote: "Once a new technology starts rolling, if you're not part of the steamroller, you're part of the road.",
@@ -58,6 +59,9 @@ function printQuote() {
   }
   if ( randomQuote.year ) {
     html += `<span class="year">${randomQuote.year}</span>"`;
+  }
+  if ( randomQuote.tags ) {
+    html += `<span class="tags">, <em>${randomQuote.tags}</em></span>`
   }
 
   html += `</p>`;
