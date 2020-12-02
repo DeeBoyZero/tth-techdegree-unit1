@@ -3,3 +3,8 @@
 ### Random Quote generator
 
 This is my version for the unit 1 project.
+
+Technologies used:
+* HTML
+* CSS
+* Javascript

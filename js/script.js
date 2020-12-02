@@ -33,7 +33,7 @@ const quotes = [
   }
 ];
 
-// A simple function that picks a random quote.
+// A simple function that picks a random item from an array passed as an argument.
 
 function getRandomQuote(arr) {
   let randomNum = Math.floor(Math.random() * arr.length);
