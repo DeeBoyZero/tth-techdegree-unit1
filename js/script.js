@@ -43,6 +43,19 @@ function getRandomQuote(arr) {
   return arr[randomNum];
 };
 
+/**
+Functions that will be used for randomizing the background color of the page. 
+**/
+function getRandomNumber() {
+  let randomNum = Math.floor(Math.random() * 255);
+  return randomNum
+}
+
+function getRandomRGB() {
+  let randomRGB = `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
+  return randomRGB;
+};
+
 /***
 A function that generates HTML code from a random quote.
 The quote is displayed on the webpage.
@@ -67,6 +80,7 @@ function printQuote() {
   html += `</p>`;
 
   document.getElementById('quote-box').innerHTML = html;
+  document.body.style.backgroundColor = getRandomRGB();
 };
 
 /***
