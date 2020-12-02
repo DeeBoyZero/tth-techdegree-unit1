@@ -36,19 +36,19 @@ const quotes = [
 // A simple function that picks a random item from an array passed as an argument.
 
 function getRandomQuote(arr) {
-  let randomNum = Math.floor(Math.random() * arr.length);
+  const randomNum = Math.floor(Math.random() * arr.length);
   return arr[randomNum];
 };
 
 // Functions that will be used for randomizing the background color of the page. 
 
 function getRandomNumber() {
-  let randomNum = Math.floor(Math.random() * 255);
+  const randomNum = Math.floor(Math.random() * 256);
   return randomNum;
 }
 
 function getRandomRGB() {
-  let randomRGB = `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
+  const randomRGB = `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
   return randomRGB;
 };
 
@@ -56,7 +56,7 @@ function getRandomRGB() {
 // The quote is displayed on the webpage. The background color of the page changes everytime the function is called.
 
 function printQuote() {
-  let randomQuote = getRandomQuote(quotes);
+  const randomQuote = getRandomQuote(quotes);
   let html = `
             <p class="quote">${randomQuote.quote}</p>
             <p class="source">${randomQuote.source}
